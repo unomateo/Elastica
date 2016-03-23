@@ -133,6 +133,9 @@ class Version140 extends Version130
         'scripted_metric',
         'filters',
         'children',
+        
+        //custom
+        'moving_avg'
     );
 
     protected $suggesters = array(
