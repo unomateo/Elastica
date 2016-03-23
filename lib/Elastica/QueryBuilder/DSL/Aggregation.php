@@ -17,6 +17,7 @@ use Elastica\Aggregation\IpRange;
 use Elastica\Aggregation\Max;
 use Elastica\Aggregation\Min;
 use Elastica\Aggregation\Missing;
+use Elastica\Aggregation\MovingAvg;
 use Elastica\Aggregation\Nested;
 use Elastica\Aggregation\Percentiles;
 use Elastica\Aggregation\Range;
@@ -467,5 +468,9 @@ class Aggregation implements DSL
     public function geohash_grid($name, $field)
     {
         return new GeohashGrid($name, $field);
+    }
+    
+    public function moving_avg($name, $bucketsPath){
+        return new MovingAvg($name, $bucketsPath);
     }
 }
