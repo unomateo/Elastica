@@ -59,6 +59,7 @@ class Version140 extends Version130
 
         // new in 1.1.0
         'template',
+        'match_phrase',
     );
 
     protected $filters = array(

@@ -19,6 +19,7 @@ use Elastica\Query\HasParent;
 use Elastica\Query\Ids;
 use Elastica\Query\Match;
 use Elastica\Query\MatchAll;
+use Elastica\Query\MatchPhrase;
 use Elastica\Query\MoreLikeThis;
 use Elastica\Query\MultiMatch;
 use Elastica\Query\Nested;
@@ -65,6 +66,18 @@ class Query implements DSL
     public function match($field = null, $values = null)
     {
         return new Match($field, $values);
+    }
+
+    /**
+     * match phrase query.
+     * @param string $field
+     * @param mixed  $values
+     *
+     * @return MatchPhrase
+     */
+    public function match_phrase($field = null, $values = null)
+    {
+        return new MatchPhrase($field, $values);
     }
 
     /**
