@@ -15,7 +15,7 @@ class Connection extends Param
     /**
      * Default elastic search port.
      */
-    const DEFAULT_PORT = 9200;
+    const DEFAULT_PORT = 11278;
 
     /**
      * Default host.
